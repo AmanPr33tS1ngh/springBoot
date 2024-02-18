@@ -8,6 +8,10 @@ public class HelloController {
     public String hello(){
         return "Hello world!";
     }
+    @GetMapping("/") // for get requests
+    public String home(){
+        return "Home!";
+    }
     @PostMapping("/hello") // for post requests
     public String helloPost(@RequestBody String name){
         System.out.println("name" + name);
